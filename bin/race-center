@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-#require_relative '../lib/worlds_best_restaurants'
-
-#WorldsBestRestaurants::CLI.new.call
