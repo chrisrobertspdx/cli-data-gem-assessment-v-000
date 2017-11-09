@@ -1,9 +1,8 @@
 class RecFinder::Rec
-  attr_accessor :name, :url, :phone, :address, :description, :alert, :details_updated
+  attr_accessor :name, :url, :phone, :address, :description, :alert
   @@all = []
   def initialize(rec_data)
     rec_data.each {|key, value| self.send(("#{key}="), value)}
-    @details_updated = false
     @@all << self
   end
   def self.create_from_data(data)

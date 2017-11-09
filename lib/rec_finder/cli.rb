@@ -20,10 +20,9 @@ class RecFinder::CLI
     print "Which recreation facility would you like more informations about? "
     index = gets.strip.to_i
     detail = RecFinder::Rec.all[index-1]
-    #see if the detail needs an update if so scrape
-    #otherwise let rec display itself
-    r = RecFinder::Scraper.scrape_detail(BASE_URL+detail.url)
-    detail.add_detail(r)
+    if detail.description == nil
+      detail.add_detail(RecFinder::Scraper.scrape_detail(BASE_URL+detail.url))
+    end
     puts ""
     puts detail.name.upcase
     puts "-----------------------"
