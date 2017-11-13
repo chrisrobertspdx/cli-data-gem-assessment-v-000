@@ -9,12 +9,12 @@ class RecFinder::CLI
   end
 
   def make_recs
-    RecFinder::Rec.create_from_data(RecFinder::Scraper.scrape_index(BASE_URL+"/facilities/directory/"))
+    RecFinder::Facility.create_from_data(RecFinder::Scraper.scrape_index(BASE_URL+"/facilities/directory/"))
   end
 
   #think about where the scrape should happen
   def display_recs
-    RecFinder::Rec.all.each_with_index{|r,index|
+    RecFinder::Facility.all.each_with_index{|r,index|
       puts "#{index+1}. #{r.name}"
     }
     print "Which recreation facility would you like more informations about? "
