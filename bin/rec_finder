@@ -4,4 +4,5 @@
 
 #WorldsBestRestaurants::CLI.new.call
 
-RecreationFinder::CLI.new.run
+THPRD = RecreationFinder::CLI.new
+THPRD.run
