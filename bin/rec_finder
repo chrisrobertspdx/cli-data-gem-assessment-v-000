@@ -1,5 +1,7 @@
-#! usr/bin/env ruby
+#!/usr/bin/env ruby
 
-require_relative "../lib/rec_finder"
+#require_relative '../lib/worlds_best_restaurants'
 
-RecFinder::CLI.new.run
+#WorldsBestRestaurants::CLI.new.call
+
+RecreationFinder::CLI.new.run
